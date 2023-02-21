@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnuGrowshop | Tienda</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<%- include('partials/header.ejs') %> 
+<body>
+
+    <h1 class="text-2xl font-bold">Todos los productos</h1>
+
+    <ul class="text-lg font-medium ">
+        
+        <% for (let i = 0; i < productos.length; i++) { %>
+            <li >
+                 <a href="/products/<%=productos[i].id%>" >
+                    <%= productos[i].nombre %>
+                </a>
+            </li>
+        <% } %>
+      
+    </ul>
+
+
+
+    <container>
+
+    <h3 class="text-2xl font-bold">Agregar producto</h3>
+
+    
+    <form action="/products" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio">
+        <label for="stock">Stock</label>
+        <input type="number" name="stock" id="stock">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion">
+        <label for="imagen">Imagen</label>
+        <input type="text" name="imagen" id="imagen">
+        <button type="submit">Agregar</button>
+
+        </form>
+
+    </container>
+   <!-- <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="public\images\imgporro\AUTO-BLACK-DOMINA1.jpg" alt="" width="384" height="512"> !-->
+   
+
+               
+    
+</body>
+</html>

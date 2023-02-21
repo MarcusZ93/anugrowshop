@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnuGrowshop | Registro</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<%- include('partials/header.ejs') %> 
+
+<body>
+
+
+    <container class="">
+    <h1 class = "mt-20 mb-40 text-2xl"> Registrarse </h1>
+
+
+    <form class = "flex flex-col items-center " action="/user/register" method="POST">
+        
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name"  required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"  required>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" required>
+        <label for="password2">Repetir contraseña</label>
+        <input type="password" name="password2" id="password2"  required>
+        <button type="submit">Registrarse</button>
+
+    </form>
+</container>
+ 
+    
+    
+
+
+    <footer>
+
+        <p>AnuGrowshop todos los derechos reservados</p>
+        <p>Nuestras redes sociales : </p>
+        <p>¿Todavía no tenes una cuenta? <a href="/register">registrarse</a></p>
+        
+    </footer>
+
+</body>
+</html>
